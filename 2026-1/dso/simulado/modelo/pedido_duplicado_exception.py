@@ -1,0 +1,2 @@
+class PedidoDuplicadoException():
+    pass
