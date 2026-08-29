@@ -120,6 +120,7 @@ class Teste:
         print("=" * 15)
         print("TESTE - PILHA")
         print("=" * 15)
+        print()
 
         self.pilha.push(7)
         self.pilha.push(3)
@@ -137,6 +138,7 @@ class Teste:
         print("=" * 15)
         print("TESTE - FILA")
         print("=" * 15)
+        print()
 
         self.fila.entra(1)
         self.fila.entra(4)
