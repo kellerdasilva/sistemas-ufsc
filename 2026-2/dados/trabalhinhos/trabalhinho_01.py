@@ -1,15 +1,15 @@
+# Trabalhinho 01 - Pilha e fila encadeadas dinâmicas
+
 # ======
 # PILHA
 # ======
 
 class ElementoPilha:
-
     def __init__(self, valor):
         self.valor = valor
         self.ant = None  # aponta pro elemento que estava embaixo dele
 
 class Pilha:
-
     def __init__(self):
         self.topo = None  # aponta pro elemento do topo da pilha
 
@@ -50,13 +50,11 @@ class Pilha:
 # =====
 
 class ElementoFila:
-
     def __init__(self, valor):
         self.valor = valor
         self.prox = None  # aponta pro próximo elemento da fila
 
 class Fila:
-
     def __init__(self):
         self.inicio = None  # aponta pro primeiro elemento (quem sai)
         self.fim = None     # aponta pro último elemento (onde entra)

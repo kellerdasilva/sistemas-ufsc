@@ -1,3 +1,5 @@
+# Trabalhinho 02 - Lista encadeada simples
+
 class Numero:
     def __init__(self, valor):
         self.valor = valor
@@ -10,60 +12,60 @@ class Lista:
 
     # Inserção de elemento
     
-    def InserirComoPrimeiro(self, novo):
-        novo_numero = Numero(novo)
+    def InserirComoPrimeiro(self, valor):
+        novo = Numero(valor)
 
-        novo_numero.proximo = self.primeiro
-        self.primeiro = novo_numero
+        novo.proximo = self.primeiro
+        self.primeiro = novo
 
-    def InserirComoUltimo(self, novo):
-        novo_numero = Numero(novo)
+    def InserirComoUltimo(self, valor):
+        novo = Numero(valor)
         
         if self.primeiro is not None:
             atual = self.primeiro
             while atual.proximo is not None:
                 atual = atual.proximo
-            atual.proximo = novo_numero
+            atual.proximo = novo
         else:
-            self.primeiro = novo_numero
+            self.primeiro = novo
 
     # Terminar
-    def InserirNaPosicao(self, posicao, novo):
-        novo_numero = Numero(novo)
+    def InserirNaPosicao(self, posicao, valor):
+        novo = Numero(valor)
         
         if self.primeiro is not None:
             atual = self.primeiro
             
             while atual.proximo is not posicao:
                 atual = atual.proximo
-            atual.proximo = novo_numero
+            atual.proximo = novo
         else:
-            self.primeiro = novo_numero
+            self.primeiro = novo
     
     # Continuar daqui em diante
-    def InserirAntesDe(self, valor, novo):
-            novo_numero = Numero(novo)
+    def InserirAntesDe(self, referencia, valor):
+            novo = Numero(valor)
                     
             if self.primeiro is not None:
                 atual = self.primeiro
                 
-                while atual.proximo.proximo is not valor:
+                while atual.proximo.proximo is not referencia:
                     atual = atual.proximo
-                atual.proximo = novo_numero
+                atual.proximo = novo
             else:
-                self.primeiro = novo_numero
+                self.primeiro = novo
     
-    def InserirDepoisDe(referencia, novo):
-            novo_numero = Numero(novo)
+    def InserirDepoisDe(self, referencia, valor):
+            novo = Numero(valor)
                                 
             if self.primeiro is not None:
                 atual = self.primeiro
                 
                 while atual.proximo.proximo is not valor:
                     atual = atual.proximo
-                atual.proximo = novo_numero
+                atual.proximo = novo
             else:
-                self.primeiro = novo_numero
+                self.primeiro = novo
     
     
     # Remoção de elemento
