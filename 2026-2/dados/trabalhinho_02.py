@@ -67,7 +67,6 @@ class Lista:
             else:
                 self.primeiro = novo
     
-    
     # Remoção de elemento
     
     def RemoverPrimeiro(self):
@@ -97,12 +96,12 @@ class Lista:
     def AcessaPrimeiro(self):
         if self.primeiro is not None:
             return self.primeiro.valor
-
+    
     def AcessaUltimo(self):
         pass
     
     def AcessaDaPosicao(posicao):
         pass
-
+    
     def Busca(referencia):
         pass
