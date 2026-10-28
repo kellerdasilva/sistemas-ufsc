@@ -31,3 +31,11 @@ async function funcaoEvento(evento) {
         campoEstado.value = retornoCep.uf;
     }
 }
+
+const botaoEnviarForm = document.getElementById("enviarForm");
+botaoEnviarForm.addEventListener("onclick", funcaoEnviar);
+
+function funcaoEnviar(evento) {
+    evento.preventDefault();
+    console.log(evento);
+}
