@@ -25,6 +25,30 @@ class FilaCircular:
             print ("A fila já está vazia.")
         else:
             x = self.dados[self.inicio]
+            self.dados[self.inicio] = None
             self.inicio = (self.inicio + 1) % self.tamanho
             self.qtd -= 1
             return x
+
+# Testando
+
+fila = FilaCircular(5)
+
+def estado():
+    print(f"{fila.dados}\nInício = {fila.inicio}\nFim = {fila.fim}\nQuantidade = {fila.qtd}")
+
+fila.entra("A")
+fila.entra("B")
+fila.entra("C")
+fila.sai()
+fila.sai()
+fila.entra("D")
+fila.entra("E")
+fila.entra("F")
+estado()
+
+fila.entra("G")
+estado()
+
+fila.entra("H")
+estado()
